@@ -16,3 +16,58 @@ img {
   display: block;
   max-width: 100%;
 }
+.timer {
+  display: flex;
+  max-width: 359px;
+  background-color: black;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10%;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.field:last-child {
+  margin-right: 0;
+}
+.field:last-child::after {
+  content: '';
+}
+.field::after {
+  content: ':';
+  position: absolute;
+  top: -14px;
+  right: -25px;
+  margin: 10px 10px;
+  color: red;
+  font-size: 60px;
+  animation: pulsing 1s infinite;
+}
+.value {
+  font-size: 60px;
+  text-align: center;
+  color: red;
+}
+.label {
+  font-size: 20px;
+  text-align: center;
+  color: red;
+}
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
+  }
+}
