@@ -6,6 +6,7 @@ const refs = {
 // =======================================================================
 refs.startBtn.disabled = false;
 let timerID = null;
+
 // =======================================================================
 refs.startBtn.addEventListener('click', () => {
   refs.startBtn.disabled = true;
@@ -22,7 +23,8 @@ function getRandomHexColor() {
 // =======================================================================
 function changeRandomBGColor() {
   timerID = setInterval(() => {
-    refs.body.style.backgroundColor = getRandomHexColor();
-    console.log(getRandomHexColor());
+    let backGroundBodyColor = getRandomHexColor();
+    refs.body.style.backgroundColor = backGroundBodyColor;
+    console.log(backGroundBodyColor);
   }, 1000);
 }
