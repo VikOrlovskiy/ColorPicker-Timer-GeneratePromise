@@ -29,8 +29,8 @@ function startIvents(e) {
     if (amount <= counter) {
       clearInterval(timerId);
     }
-    delay += step;
     createPromise(counter, delay);
+    delay += step;
     console.log(counter);
   }, delay);
 }
