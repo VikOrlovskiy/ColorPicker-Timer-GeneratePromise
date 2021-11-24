@@ -12,9 +12,10 @@ const refs = {
 };
 
 refs.startBtn.disabled = true;
-let timeLeft = 0;
+
 let timerId = null;
 let choseDate = 0;
+let timeLeft = 0;
 // =====================================================================
 const options = {
   enableTime: true,
@@ -42,8 +43,8 @@ function startClock() {
     let nowDate = Date.now();
     timeLeft = choseDate - nowDate;
     updateClockFase(convertMs(timeLeft));
-
-    if (timeLeft < 0) {
+    console.log(timeLeft);
+    if (timeLeft < 1000) {
       clearInterval(timerId);
     }
   }, 1000);
